@@ -1,3 +1,10 @@
+[![Build Status](https://travis-ci.org/lukaszimmermann/kotlinext-string.svg?branch=master)](https://travis-ci.org/lukaszimmermann/kotlinext-string)
+[![codecov](https://codecov.io/gh/lukaszimmermann/kotlinext-string/branch/develop/graph/badge.svg)](https://codecov.io/gh/lukaszimmermann/kotlinext-string)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/d764b4806c7e494e84db0eac1e7cc477)](https://www.codacy.com/app/lukaszimmermann/kotlinext-string?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=lukaszimmermann/kotlinext-string&amp;utm_campaign=Badge_Grade)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
+
 # kotlin-extension-string
 This repository simply provides an artifact with additional String extension
 functions for the Kotlin String class.
