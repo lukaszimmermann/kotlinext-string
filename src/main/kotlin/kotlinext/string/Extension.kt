@@ -1,4 +1,4 @@
-package kotlinext
+package kotlinext.string
 
 /**
  * Ensures that this [String] ends with the provided [Char].
