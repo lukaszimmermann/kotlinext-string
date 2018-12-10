@@ -7,7 +7,7 @@ plugins {
 }
 
 group 'kotlinext'
-version '2.0'
+version '3.0'
 
 repositories {
     jcenter()
@@ -63,7 +63,7 @@ publishing {
 
 model {
     tasks.generatePomFileForMavenPublication {
-        destination = file("$buildDir/libs/string-2.0.pom")
+        destination = file("$buildDir/libs/string-3.0.pom")
     }
 }
 
