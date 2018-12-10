@@ -41,18 +41,25 @@ publishing {
     publications {
         maven(MavenPublication) {
             from components.java
-            pom.withXml {
-                asNode().dependencies.'*'.findAll() {
-                    it.scope.text() == 'runtime' && project.configurations.compile.allDependencies.find { dep ->
-                        dep.name == it.artifactId.text()
-                    }
-                }.each() {
-                    it.scope*.value = 'compile'
-                }
-            }
         }
     }
 }
+//publishing {
+//    publications {
+//        maven(MavenPublication) {
+//            from components.java
+//            pom.withXml {
+//                asNode().dependencies.'*'.findAll() {
+//                    it.scope.text() == 'runtime' && project.configurations.compile.allDependencies.find { dep ->
+//                        dep.name == it.artifactId.text()
+//                    }
+//                }.each() {
+//                    it.scope*.value = 'compile'
+//                }
+//            }
+//        }
+//    }
+//}
 
 model {
     tasks.generatePomFileForMavenPublication {
