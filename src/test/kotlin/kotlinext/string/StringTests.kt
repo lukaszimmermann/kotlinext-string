@@ -32,4 +32,35 @@ class StringTests {
         assertFalse("".containsWhitespace())
         assertFalse("foo".containsWhitespace())
     }
+
+    @Test
+    fun startsAndEndsWith() {
+        assertTrue(".skhf.".startsAndEndsWith('.'))
+        assertTrue(".".startsAndEndsWith('.'))
+        assertTrue("__".startsAndEndsWith('_'))
+        assertTrue(" adaf ".startsAndEndsWith(' '))
+        assertFalse("alfhasf".startsAndEndsWith('_'))
+        assertFalse(".sfsg".startsAndEndsWith('.'))
+        assertFalse("".startsAndEndsWith('g'))
+    }
+
+    @Test
+    fun ensureDoubleQuoted() {
+        assertEquals("\"slkjfsof\"", "slkjfsof".ensureDoubleQuoted())
+        assertEquals("\"slkjfsof\"", "\"slkjfsof\"".ensureDoubleQuoted())
+        assertEquals("\"\"", "\"\"".ensureDoubleQuoted())
+        assertEquals("\"\"", "".ensureDoubleQuoted())
+        assertEquals("\"\"\"", "\"".ensureDoubleQuoted())
+        assertEquals("\"jhhgjhj\"\"", "jhhgjhj\"".ensureDoubleQuoted())
+    }
+
+    @Test
+    fun ensureSingleQuoted() {
+        assertEquals("'slkjfsof'", "slkjfsof".ensureSingleQuoted())
+        assertEquals("'slkjfsof'", "'slkjfsof'".ensureSingleQuoted())
+        assertEquals("''", "''".ensureSingleQuoted())
+        assertEquals("''", "".ensureSingleQuoted())
+        assertEquals("'''", "'".ensureSingleQuoted())
+        assertEquals("'jhhgjhj''", "jhhgjhj'".ensureSingleQuoted())
+    }
 }
